@@ -1,0 +1,112 @@
+.testimonials {
+  // .testimonials__container
+
+  &__container {
+  }
+
+  // .testimonials__wrapper
+
+  &__wrapper {
+    @include adaptiveValue("padding-top", 80, 25);
+    @include adaptiveValue("padding-bottom", 60, 15);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    @include adaptiveValue("row-gap", 120, 40);
+  }
+
+  // .testimonials__title
+
+  &__title {
+    position: relative;
+    font-family: $mainFontFamily;
+    @include adaptiveValue("font-size", 60, 24);
+    font-weight: 700;
+    line-height: 1.16;
+    padding-bottom: toRem(10);
+    text-align: center;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+    @include adaptiveValue("padding-bottom", 40, 15);
+
+    &::after {
+      position: absolute;
+      width: 140%;
+      left: -20%;
+      bottom: 0;
+      content: "";
+      height: toRem(1);
+      background: linear-gradient(
+        90deg,
+        hsl(0, 100%, 50%) 0%,
+        hsl(104, 100%, 50%) 48.9%,
+        hsl(248, 100%, 50%) 100%
+      );
+    }
+  }
+
+  // .testimonials__box
+
+  &__box {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    @include adaptiveValue("column-gap", 80, 25);
+    row-gap: toRem(10);
+    max-width: toRem(1080);
+  }
+}
+.box-feedback {
+  // .box-feedback__section
+
+  &__section {
+    @include adaptiveValue("padding-top", 70, 20);
+    @include adaptiveValue("padding-bottom", 70, 20);
+    @include adaptiveValue("padding-right", 40, 10);
+    @include adaptiveValue("padding-left", 40, 10);
+    aspect-ratio: 300 / 340;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: toRem(10);
+    text-align: center;
+    font-family: $mainFontFamily;
+    background-color: #6f00a9;
+  }
+
+  // .box-feedback__name
+
+  &__name {
+    @include adaptiveValue('font-size', 40, 24);
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  // .box-feedback__position
+
+  &__position {
+    font-size: toRem(20);
+    font-weight: 400;
+    line-height: 1.75;
+  }
+
+  // .box-feedback__description
+
+  &__description {
+    max-width: toRem(221);
+    font-size: toRem(20);
+    font-weight: 400;
+    line-height: 1.75;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+  }
+}

@@ -1,0 +1,50 @@
+@use "sass:math";
+
+@import url(https://fonts.googleapis.com/css?family=Exo+2:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+@import url(https://fonts.googleapis.com/css?family=Orbitron:regular,500,600,700,800,900);
+// @import "_fonts.scss";
+@import "_reset.scss";
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_header.scss";
+@import "_main.scss";
+@import "_footer.scss";
+
+// ==========================================================
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "Exo", sans-serif;
+}
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  overflow: clip;
+
+  display: flex;
+  flex-direction: column;
+}
+.wrapper > main {
+  flex-grow: 1;
+}
+/* ------------------------- */
+[class*="__container"] {
+  max-width: toRem(1320);
+  padding-inline: toRem(15);
+  margin: 0 auto;
+}
+
+.line-decoration {
+  width: 100%;
+  height: toRem(70);
+
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.1) 0%,
+    rgba(66, 255, 0, 0.1) 48.9%,
+    rgba(36, 0, 255, 0.1) 100%
+  );
+}
+// ============================

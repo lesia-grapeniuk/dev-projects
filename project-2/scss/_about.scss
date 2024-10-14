@@ -1,0 +1,147 @@
+.about {
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  @include adaptiveValue("padding-top", 80, 15);
+  @include adaptiveValue("padding-bottom", 80, 15);
+
+  &::before {
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    content: "";
+    display: block;
+    background-image: url(../images/backgrounds/bg.webp);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+
+  // .about__container
+
+  // &__container {
+  // }
+}
+.container-about {
+  // .container-about__body
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include adaptiveValue("row-gap", 60, 20);
+
+  // &__body {
+  // }
+}
+.body-about {
+  max-width: toRem(992);
+  display: flex;
+  flex-direction: column;
+  @include adaptiveValue("row-gap", 40, 10);
+
+  // .body-about__title
+
+  &__title {
+    position: relative;
+    font-family: $mainFontFamily;
+    @include adaptiveValue("font-size", 60, 24);
+    @include adaptiveValue("padding-bottom", 40, 15);
+    font-weight: 700;
+    line-height: 1.16;
+    text-align: center;
+    text-transform: uppercase;
+
+    &::after {
+      position: absolute;
+      width: 50%;
+      left: 25%;
+      bottom: 0;
+      content: "";
+      height: toRem(1);
+      background: linear-gradient(
+        90deg,
+        hsl(0, 100%, 50%) 0%,
+        hsl(104, 100%, 50%) 48.9%,
+        hsl(248, 100%, 50%) 100%
+      );
+    }
+  }
+
+  // .body-about__text
+
+  &__text {
+    font-family: $mainFontFamily;
+    font-size: toRem(18);
+    font-weight: 400;
+    line-height: 2.222;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+    // }
+  }
+}
+
+.running-line {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  &__list {
+    max-width: toRem(1100);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: running-line-scroll 15s linear infinite;
+    @include adaptiveValue("column-gap", 130, 30);
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  &__item {
+    flex: 0 0 auto;
+    padding-left: toRem(30);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Orbitron", sans-serif;
+    @include adaptiveValue('font-size', 20, 14);
+    font-weight: 500;
+    line-height: 1.25;
+    text-transform: capitalize;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 25%;
+      width: toRem(10);
+      height: toRem(10);
+      border-radius: 50%;
+      background-image: linear-gradient(
+        90deg,
+        hsl(0, 100%, 50%) 0%,
+        hsl(104, 100%, 50%) 48.9%,
+        hsl(248, 100%, 50%) 100%
+      );
+    }
+
+    &:last-child {
+      @include adaptiveValue("margin-right", 130, 30);
+    }
+  }
+
+  @keyframes running-line-scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}

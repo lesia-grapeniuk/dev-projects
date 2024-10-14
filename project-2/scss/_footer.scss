@@ -1,0 +1,224 @@
+.contact {
+  // .contact__container
+
+  &__container {
+  }
+
+  // .contact__wrapper
+
+  &__wrapper {
+    @include adaptiveValue("padding-top", 150, 40);
+    @include adaptiveValue("padding-bottom", 110, 30);
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  // .contact__main-block
+
+  &__main-block {
+    max-width: toRem(960);
+    display: flex;
+    flex-direction: column;
+    gap: toRem(20);
+  }
+
+  // .contact__title
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 60, 20);
+    padding-bottom: toRem(20);
+    font-family: $mainFontFamily;
+    @include adaptiveValue("font-size", 60, 24);
+    font-weight: 700;
+    line-height: 1.16;
+    text-transform: uppercase;
+    text-align: left;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: toRem(1);
+      width: 100%;
+      background: linear-gradient(
+        90deg,
+        hsl(0, 100%, 50%) 0%,
+        hsl(104, 100%, 50%) 48.9%,
+        hsl(248, 100%, 50%) 100%
+      );
+    }
+
+    @media (max-width: toEm(550)) {
+      text-align: center;
+    }
+  }
+
+  // .contact__form
+
+  &__form {
+    @include adaptiveValue("margin-bottom", 80, 20);
+  }
+
+  // .contact__list
+
+  &__list-form {
+    display: flex;
+    column-gap: toRem(40);
+    row-gap: toRem(10);
+    flex-wrap: wrap;
+    align-items: center;
+
+    @media (max-width: toEm(955)) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include adaptiveValue("gap", 40, 15);
+    }
+  }
+
+  // .contact__item
+
+  &__item {
+    @media (max-width: toEm(955)) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  // .contact__vertical-text
+
+  &__vertical-text {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-family: $mainFontFamily;
+    font-size: toRem(20);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+    position: relative;
+  }
+}
+
+.item-contact {
+  font-family: $mainFontFamily;
+  font-size: toRem(20);
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+  // .item-contact__label
+
+  &__label {
+    padding-right: 0;
+    @media (max-width: toEm(955)) {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: toRem(15);
+      align-items: center;
+    }
+  }
+
+  // .item-contact__input
+
+  &__input {
+    max-width: toRem(200);
+    text-align: center;
+  }
+
+  // .item-contact__button
+
+  &__button {
+    padding: toRem(10) toRem(40);
+    background-color: #6f00a9;
+    font-family: "Orbitron", sans-serif;
+    text-transform: uppercase;
+    @include adaptiveValue("font-size", 18, 14);
+    font-weight: 900;
+    line-height: 1.11;
+    flex-shrink: 0;
+    cursor: pointer;
+
+    @media (hover: hover) {
+      &:hover {
+        background: #0B0045;
+      }
+    }
+  }
+}
+.connection {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  @include adaptiveValue("column-gap", 80, 20);
+  row-gap: toRem(10);
+  font-family: "Exo", sans-serif;
+  @include adaptiveValue("font-size", 20, 14);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+
+  // .connection__item
+
+  &__item {
+    display: flex;
+  }
+
+  // .connection__call
+
+  &__call {
+    @include adaptiveValue("padding-left", 40, 25);
+    position: relative;
+    flex: 1 0 auto;
+    &::before {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content: "";
+      background-image: url(../images/icons/call.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: toRem(20);
+      height: toRem(20);
+    }
+  }
+
+  // .connection__location
+
+  &__location {
+    @include adaptiveValue("padding-left", 40, 25);
+    position: relative;
+    flex: 1 0 auto;
+    &::before {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content: "";
+      background-image: url(../images/icons/location.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: toRem(20);
+      height: toRem(20);
+    }
+  }
+  &__mail {
+    @include adaptiveValue("padding-left", 40, 25);
+    position: relative;
+    flex: 1 0 auto;
+    &::before {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content: "";
+      background-image: url(../images/icons/email.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      width: toRem(20);
+      height: toRem(20);
+    }
+  }
+}

@@ -1,0 +1,225 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  background-color: #000;
+  // .header__container
+
+  &__container {
+    // border: 1px solid red;
+  }
+  &__body {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include adaptiveValue("column-gap", 100, 10);
+    row-gap: toRem(10);
+    flex-wrap: wrap;
+    @include adaptiveValue("padding-top", 60, 20);
+    @include adaptiveValue("padding-bottom", 30, 10);
+  }
+
+  // .header__name
+
+  &__logo {
+    font-family: $mainFontFamily;
+    font-size: toRem(30);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.1em;
+    transition: all 0.3s ease;
+    z-index: 4;
+    @media (hover: hover) {
+      &:hover {
+        text-shadow: toRem(4) toRem(4) toRem(2) #6f00a9;
+        transition: all 0.5s ease;
+      }
+    }
+  }
+
+  // .header__list
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: toRem(10);
+    @include adaptiveValue("column-gap", 40, 15);
+    @media (max-width: toEm(949.99)) {
+      row-gap: toRem(30);
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  // .header__list-social-action
+
+  &__list-social-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: toRem(40);
+  }
+
+  // .header__burger
+
+  &__burger {
+    font-size: toRem(16);
+  }
+}
+
+.about-us-list {
+  &__link {
+    font-family: "Orbitron", sans-serif;
+    font-size: toRem(16);
+    font-weight: 500;
+    line-height: 1.25;
+    transition: all 0.3s ease;
+    gap: toRem(10);
+    padding: toRem(10);
+    text-transform: uppercase;
+    @media (hover: hover) {
+      &:hover {
+        background: #6f00a9;
+        transition: all 0.5s ease;
+      }
+    }
+    @media (max-width: toEm(9.99)) {
+      // @include adaptiveValue ('font-size', 24, 16);
+      font-size: toRem(24);
+    }
+  }
+}
+.action-social-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: toRem(19);
+  row-gap: toRem(5);
+  flex-wrap: wrap;
+  max-width: toRem(160);
+
+  @media (max-width: toEm(1160)) {
+    margin: 0 auto;
+  }
+
+  // .action-social-list__link
+
+  &__link {
+    width: toRem(20);
+    overflow: clip;
+    height: toRem(20);
+    transition: all 0.3s ease;
+    @media (hover: hover) {
+      &:hover {
+        transform: scale(1.5);
+        transition: all 0.5s ease;
+      }
+    }
+  }
+  &__link img {
+    object-fit: contain;
+    aspect-ratio: 20 / 20;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.menu-icon {
+  display: none;
+  @media (max-width: toEm(950)) {
+    display: block;
+    position: relative;
+    height: toRem(18);
+    width: toRem(30);
+    flex-shrink: 0;
+    
+
+    span,
+    &::before,
+    &::after {
+      content: "";
+      background-color: $textcolor;
+      position: absolute;
+      left: 0;
+      height: toRem(2);
+      width: 100%;
+      transition: all 0.5s;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+  }
+  // .burger__liner
+
+  span {
+    top: 50%;
+    transform: translate(toRem(0), -50%);
+  }
+}
+// nav-list
+.burger-menu {
+  display: block;
+  position: fixed;
+  background-color: #000;
+  opacity: 0.9;
+  right: -100%;
+  transition: all 0.5s;
+  width: 50%;
+  @include adaptiveValue("top", 135, 50);
+  max-height: 100%;
+  z-index: 1;
+  overflow: auto;
+  padding-bottom: toRem(20);
+  @media (max-width: toEm(600)) {
+    width: 100%;
+  }
+  &::before {
+    content: "";
+    right: -100%;
+    transition: all 0.4s;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: toRem(400);
+    z-index: 2;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include adaptiveValue("row-gap", 45, 20);
+  }
+}
+.menu-open .header__burger {
+  transition: all 0.5s;
+  right: 0;
+}
+.menu-open .header__burger::before {
+  right: 0;
+  transition: all 0.5s;
+}
+
+.menu-open .menu-icon::before {
+  transform: rotate(-45deg);
+  top: 50%;
+  margin-top: toRem(-1);
+  transition: all 0.5s;
+}
+.menu-open .menu-icon::after {
+  transform: rotate(45deg);
+  bottom: 50%;
+  margin-bottom: toRem(-1);
+  transition: all 0.5s;
+}
+.menu-open .menu-icon span {
+  transform: scale(0);
+}

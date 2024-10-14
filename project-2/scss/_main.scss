@@ -1,0 +1,8 @@
+.page {
+  flex: auto;
+  @include adaptiveValue("padding-top", 135, 75);
+}
+@import "_hero.scss";
+@import "_about.scss";
+@import "_portfolio.scss";
+@import "_testimonials.scss";
