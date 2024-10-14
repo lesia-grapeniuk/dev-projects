@@ -1,0 +1,227 @@
+.best-sellers {
+  // .best-sellers__wrapper
+
+  &__wrapper {
+    @include adaptiveValue("padding-top", 60, 25);
+    @include adaptiveValue("padding-bottom", 60, 15);
+  }
+
+  // .best-sellers__container
+
+  &__container {
+
+  }
+}
+.container-bst-seller {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include adaptiveValue("gap", 40, 10);
+
+  // .container-bst-seller__title
+
+  &__title {
+    flex-shrink: 1;
+    font-family: "Roboto", sans-serif;
+    @include adaptiveValue("font-size", 50, 24);
+    font-weight: 500;
+    line-height: 1.16;
+    text-align: center;
+  }
+
+  &__title--h4 {
+    width: 100%;
+    font-size: toRem(16);
+    font-weight: 600;
+    line-height: 1.36;
+    text-align: left;
+  }
+
+  // .container-bst-seller__list-products
+
+  &__list-products {
+  }
+
+  // .container-bst-seller__cards
+
+  &__cards {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill, minmax(toRem(300), 1fr));
+    @include adaptiveValue("column-gap", 30, 10);
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: toRem(10);
+  }
+
+  // .container-bst-seller__card
+
+  &__card {
+    padding: toRem(10);
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: flex-start;
+    gap: toRem(18);
+
+    transition: all 0.3s;
+    border-radius: toRem(8);
+
+    &:hover {
+      transition: all 0.4s;
+      transform: scale(1.03);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  // .container-bst-seller__link
+
+  &__link {
+    border-radius: toRem(8);
+    transition: all 0.3s;
+    width: 100%;
+    height: toRem(400);
+    border-radius: toRem(8);
+    overflow: hidden;
+
+    &:hover {
+      transition: all 0.4s;
+      transform: scale(1.07);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  // .container-bst-seller__img
+
+  &__img {
+    border-radius: toRem(8);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // .container-bst-seller__info-block
+
+  &__info-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: toRem(16);
+    align-items: space-between;
+    justify-content: center;
+  }
+  // .container-bst-seller__price-block
+
+  &__price-block {
+    display: flex;
+    gap: toRem(16);
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .container-bst-seller__kind-of-product
+
+  &__kind-of-product {
+    font-family: "Open+Sans", sans-serif;
+    font-size: toRem(16);
+    flex-shrink: 1;
+    font-weight: 400;
+    line-height: 1.36;
+    text-align: left;
+  }
+
+  // .container-bst-seller__price
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    gap: toRem(10);
+    font-weight: 600;
+    text-align: right;
+  }
+
+  // .container-bst-seller__discount
+
+  &__discount {
+    font-weight: 600;
+    text-align: right;
+    color: #ff6f61;
+  }
+}
+.products-list {
+  width: 100%;
+
+  // .products-list__products
+
+  &__products {
+    padding-inline: toRem(30);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: toRem(10);
+  }
+
+  // .products-list__list
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include adaptiveValue("gap", 40, 10);
+  }
+
+  // .products-list__item
+
+  &__item {
+    flex-shrink: 0;
+  }
+
+  // .products-list__link
+
+  &__link {
+    font-family: "Open+Sans", sans-serif;
+    @include adaptiveValue("font-size", 16, 14);
+    font-weight: 400;
+    line-height: 1.36;
+    text-align: left;
+    text-transform: capitalize;
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.03);
+      transition: all 0.5s;
+      color: #ff6e61;
+    }
+  }
+  &__link--bold {
+    font-weight: 600;
+  }
+
+  // .products-list__btn-link
+
+  &__btn-link {
+    flex-shrink: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: "Open+Sans", sans-serif;
+    @include adaptiveValue("font-size", 16, 8);
+    font-weight: 400;
+    line-height: 1.36;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+    @include adaptiveValue("padding-inline", 15, 7);
+    @include adaptiveValue("padding-block", 5, 2);
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.03);
+      transition: all 0.5s;
+      background-color: #ff6e61;
+    }
+  }
+}

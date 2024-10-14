@@ -1,0 +1,28 @@
+.portfolio {
+  position: relative;
+  margin: 150px 0 50px;
+}
+.portfolio::before {
+  content: "";
+  background-image: url(../images/backgrounds/vector.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+}
+
+.edits__title {
+  font-family: "Exo", sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.16;
+  text-align: left;
+  text-transform: uppercase;
+}

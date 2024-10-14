@@ -1,0 +1,155 @@
+.collections {
+  background-color: #e3e3e3;
+  background-image: url("../../images/backgrounds/frame-left.svg"),
+    url("../../images/backgrounds/frame-right.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left 75%, right 75%;
+  background-size: toRem(132) toRem(66), toRem(195) toRem(261);
+  @include adaptiveValue('padding-top', 144, 110);
+  // .collections__wrapper
+
+  &__wrapper {
+    @include adaptiveValue("padding-top", 60, 20);
+    @include adaptiveValue("padding-bottom", 60, 20);
+    max-width: toRem(1210);
+    margin: 0 auto;
+  }
+
+  // .collections__container
+
+  &__container {
+  }
+
+  @media (max-width: toEm(800)) {
+    @include adaptiveValue("padding-top", 100, 75);
+  }
+  @media (max-width: toEm(700)) {
+    @include adaptiveValue("padding-top", 50, 35);
+  }
+}
+
+.container-collections {
+  display: grid;
+  grid-template-columns: minmax(0, toRem(682)) minmax(0, toRem(424));
+  @include adaptiveValue("column-gap", 100, 20);
+  row-gap: toRem(25);
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: toEm(596)) {
+    grid-template-columns: 1fr;
+    grid-template-rows: toRem(340) minmax(0 toRem(542));
+    @include adaptiveValue("row-gap", 60, 10);
+  }
+
+  // .container-collections__content
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include adaptiveValue("row-gap", 60, 20);
+  }
+
+  // .container-collections__title
+
+  &__title {
+    font-family: inherit;
+    @include adaptiveValue("font-size", 74, 32);
+    font-weight: 300;
+    line-height: 1.34;
+    text-transform: capitalize;
+  }
+
+  // .container-collections__text
+
+  &__text {
+    font-family: inherit;
+    text-transform: capitalize;
+    @include adaptiveValue("font-size", 30, 18);
+    font-weight: 400;
+    line-height: 1.8;
+  }
+
+  // .container-collections__button
+
+  &__button {
+    width: toRem(223);
+    height: toRem(72);
+    padding: toRem(19) toRem(26);
+    gap: toRem(8);
+    background: #1e2832;
+    color: #fff;
+    font-family: inherit;
+    @include adaptiveValue("font-size", 29, 18);
+    font-weight: 400;
+    line-height: 1.17;
+    text-align: left;
+    text-transform: capitalize;
+    text-align: center;
+    vertical-align: middle;
+    flex-shrink: 0;
+
+    &::before {
+      content: "";
+      background-image: url("../images/icons/shoping-white.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: toRem(24);
+      height: toRem(24);
+      margin-right: toRem(8);
+      transition: all 0.3s;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        transition: all 0.5s;
+        background-color: #ff6e61;
+      }
+    }
+
+    @media (max-width: toEm(596)) {
+      width: 100%;
+    }
+  }
+
+  // .container-collections__image
+
+  &__image {
+    border: toRem(2) solid #b6b7b7;
+    border-radius: toRem(160) toRem(0);
+    display: flex;
+
+    &__item {
+      flex: 0 1 toRem(424);
+    }
+
+    @media (max-width: toEm(596)) {
+      border-radius: toRem(160) toRem(0);
+      max-width: toRem(424);
+      width: 100%;
+      align-self: center;
+      justify-self: center;
+      max-height: toRem(540);
+      margin-top: toRem(20);
+      margin-left: toRem(20);
+    }
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 424 / 542;
+    border-radius: toRem(160) toRem(0);
+    margin: toRem(-20) toRem(-18);
+
+    @media (max-width: toEm(596)) {
+      aspect-ratio: 424 / 542;
+      border-radius: toRem(160) toRem(0);
+      margin: toRem(-20) toRem(-18);
+      width: 100%;
+      max-height: toRem(542);
+      object-fit: cover;
+    }
+  }
+}

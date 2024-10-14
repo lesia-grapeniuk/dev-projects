@@ -1,0 +1,8 @@
+.collections {
+  background-color: #e3e3e3;
+}
+.collections::before {
+  content: "";
+  background: url("../../images/backgrounds/frame-left.svg");
+  background-repeat: no-repeat;
+}

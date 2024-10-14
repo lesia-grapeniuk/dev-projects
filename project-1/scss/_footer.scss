@@ -1,0 +1,233 @@
+.footer {
+  background-color: #f9f9f9;
+
+  @include adaptiveValue("padding-top", 50, 5);
+  font-family: "Roboto", sans-serif;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    @include adaptiveValue("gap", 20, 5);
+    @include adaptiveValue("column-gap", 42, 5);
+    @include adaptiveValue("padding-block", 30, 5);
+
+    @media (max-width: toEm(500)) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: toRem(15);
+    }
+  }
+
+  &__container--small {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    @include adaptiveValue("padding-block", 10, 5);
+  }
+
+  &__section {
+    display: flex;
+    align-items: space-between;
+    flex-direction: column;
+    @include adaptiveValue("row-gap", 22, 5);
+
+    @media (max-width: toEm(390)) {
+      width: 100%;
+      align-items: center;
+      text-align: center;
+    }
+
+    &-title {
+      font-family: "Open+Sans", sans-serif;
+      @include adaptiveValue("font-size", 16, 12);
+      font-weight: 600;
+      color: #000000;
+      line-height: 1.36;
+      text-align: left;
+      text-transform: uppercase;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    font-family: "AmstelvarAlpha Default", sans-serif;
+    @include adaptiveValue("font-size", 28, 18);
+    font-weight: 500;
+    text-transform: uppercase;
+    flex-shrink: 0;
+
+    &::after {
+      content: "";
+      background-image: url("/images/icons/logo-romb.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      vertical-align: middle;
+      margin-left: toRem(10);
+      width: toRem(25);
+      height: toRem(25);
+      right: 50%;
+      top: 50%;
+    }
+    &::before {
+      content: "";
+      margin-right: toRem(10);
+      background-image: url("/images/icons/logo-romb.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      vertical-align: middle;
+      width: toRem(25);
+      height: toRem(25);
+      right: 50%;
+      top: 50%;
+    }
+  }
+
+  &__description {
+    font-family: "Open+Sans", sans-serif;
+    @include adaptiveValue("font-size", 16, 12);
+    font-weight: 400;
+    line-height: 1.8;
+    text-align: left;
+    color: #1e2832;
+
+    text-align: justify;
+    vertical-align: middle;
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @include adaptiveValue("gap", 38, 10);
+  }
+
+  &__social-item {
+    display: inline-block;
+  }
+
+  &__social-link {
+    display: flex;
+    align-items: center;
+
+    width: toRem(25);
+    max-width: 25px;
+    height: toRem(25);
+    transition: all 0.3s;
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+    }
+
+    &:hover {
+      transform: scale(1.08);
+      transition: all 0.4s;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(12);
+  }
+
+  &__list-item {
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: toRem(14);
+    color: #333;
+    transition: all 0.3s;
+
+    &:hover {
+      transition: all 0.4s;
+      color: #ff6f61;
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    background-color: #1e2832;
+    color: #fff;
+
+    &__wrapper {
+    }
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__copyright {
+    flex-shrink: 0;
+    font-family: "Open+Sans", sans-serif;
+    @include adaptiveValue("font-size", 16, 10);
+    font-weight: 400;
+    line-height: 1.36;
+    text-align: left;
+  }
+
+  &__payments {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include adaptiveValue("gap", 40, 5);
+    gap: toRem(40);
+  }
+
+  &__payment-item {
+    max-width: toRem(50);
+    max-height: toRem(50);
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.4s;
+    }
+  }
+
+  &__payment-img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__scroll-to-top {
+    text-decoration: none;
+    flex-shrink: 0;
+    @include adaptiveValue("font-size", 16, 10);
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.4s;
+    }
+  }
+
+
+  &__about {
+    display: flex;
+    justify-content: space-between;
+    max-width: toRem(390);
+    flex-grow: 1;
+    @include adaptiveValue("gap", 32, 5);
+
+    @media (max-width: toEm(930)) {
+      flex-grow: 0;
+    }
+    @media (max-width: toEm(500)) {
+      flex-grow: 1;
+    }
+  }
+}
