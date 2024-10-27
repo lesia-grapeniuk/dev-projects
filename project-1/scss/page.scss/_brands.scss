@@ -48,6 +48,10 @@
       left: 10%;
       transform: none;
     }
+    @media (max-width: toEm(429)) {
+      top: -1.5%;
+      transform: none;
+    }
   }
 
   // .container-brands__box

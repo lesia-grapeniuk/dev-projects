@@ -65,7 +65,7 @@
 
     &::after {
       content: "";
-      background-image: url("/images/icons/logo-romb.svg");
+      background-image: url("../images/icons/logo-romb.svg");
       background-repeat: no-repeat;
       background-size: contain;
       vertical-align: middle;
@@ -78,7 +78,7 @@
     &::before {
       content: "";
       margin-right: toRem(10);
-      background-image: url("/images/icons/logo-romb.svg");
+      background-image: url("../images/icons/logo-romb.svg");
       background-repeat: no-repeat;
       background-size: contain;
       vertical-align: middle;

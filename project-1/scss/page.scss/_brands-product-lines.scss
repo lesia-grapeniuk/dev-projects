@@ -1,6 +1,6 @@
 .brands-product-lines {
-  @include adaptiveValue("padding-top", 40, 15);
-  @include adaptiveValue("padding-bottom", 40, 15);
+  @include adaptiveValue("padding-top", 90, 40);
+  @include adaptiveValue("padding-bottom", 60, 30);
   background-color: #fff;
 
   // .brands-product-lines__container
