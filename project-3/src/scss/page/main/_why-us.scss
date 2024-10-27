@@ -122,7 +122,7 @@ width: 100%;
 
     &::before {
       content: "";
-      background-image: url("/src/assets/image/icons/knife-spoon.svg");
+      background-image: url("../src/assets/image/icons/knife-spoon.svg");
       background-size: cover;
       background-repeat: no-repeat;
       width: toRem(31);
@@ -143,7 +143,7 @@ width: 100%;
 
     &::before {
       content: "";
-      background-image: url("/src/assets/image/icons/spoon-fork.svg");
+      background-image: url("../src/assets/image/icons/spoon-fork.svg");
       background-size: cover;
       background-repeat: no-repeat;
       width: toRem(27);
@@ -164,7 +164,7 @@ width: 100%;
 
     &::before {
       content: "";
-      background-image: url("/src/assets/image/icons/delivery.svg");
+      background-image: url("../src/assets/image/icons/delivery.svg");
       background-size: cover;
       background-repeat: no-repeat;
       width: toRem(41);

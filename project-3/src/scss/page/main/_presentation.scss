@@ -248,7 +248,7 @@
 
     &::before {
       content: "";
-      background-image: url("/src/assets/image/icons/facebook.svg");
+      background-image: url("../src/assets/image/icons/facebook.svg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -280,7 +280,7 @@
 
     &::before {
       content: "";
-      background-image: url("/src/assets/image/icons/instag.svg");
+      background-image: url("../src/assets/image/icons/instag.svg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -311,7 +311,7 @@
 
     &::before {
       content: "";
-      background-image: url("/src/assets/image/icons/tweeter.svg");
+      background-image: url("../src/assets/image/icons/tweeter.svg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -342,7 +342,7 @@
 
     &::before {
       content: "";
-      background-image: url("/src/assets/image/icons/linkedin.svg");
+      background-image: url("../src/assets/image/icons/linkedin.svg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;

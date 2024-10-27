@@ -274,23 +274,24 @@ input[type=tel] {
   }
 }
 @media (min-width: 20em) and (max-width: 84.375em) {
-  @supports (gap: clamp( 0.3125rem , -0.1729368932rem  +  2.427184466vw , 1.875rem )) {
+  @supports (gap: clamp( 0.25rem , -0.2548543689rem  +  2.5242718447vw , 1.875rem )) {
     .top-header__list {
-      gap: clamp( 0.3125rem , -0.1729368932rem  +  2.427184466vw , 1.875rem );
+      gap: clamp( 0.25rem , -0.2548543689rem  +  2.5242718447vw , 1.875rem );
     }
   }
-  @supports not (gap: clamp( 0.3125rem , -0.1729368932rem  +  2.427184466vw , 1.875rem )) {
+  @supports not (gap: clamp( 0.25rem , -0.2548543689rem  +  2.5242718447vw , 1.875rem )) {
     .top-header__list {
-      gap: calc(0.3125rem + 1.5625 * (100vw - 20rem) / 64.375);
+      gap: calc(0.25rem + 1.625 * (100vw - 20rem) / 64.375);
     }
   }
 }
 @media (max-width: 20em) {
   .top-header__list {
-    gap: 0.3125rem;
+    gap: 0.25rem;
   }
 }
 .top-header__item {
+  font-weight: 700;
   line-height: 1.21;
   text-align: center;
   vertical-align: middle;
@@ -302,6 +303,28 @@ input[type=tel] {
   -webkit-transform-origin: center;
       -ms-transform-origin: center;
           transform-origin: center;
+}
+@media (min-width: 84.375em) {
+  .top-header__item {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 84.375em) {
+  @supports (font-size: clamp( 0.6875rem , 0.5904126214rem  +  0.4854368932vw , 1rem )) {
+    .top-header__item {
+      font-size: clamp( 0.6875rem , 0.5904126214rem  +  0.4854368932vw , 1rem );
+    }
+  }
+  @supports not (font-size: clamp( 0.6875rem , 0.5904126214rem  +  0.4854368932vw , 1rem )) {
+    .top-header__item {
+      font-size: calc(0.6875rem + 0.3125 * (100vw - 20rem) / 64.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .top-header__item {
+    font-size: 0.6875rem;
+  }
 }
 .top-header__item:hover a {
   -webkit-transition: all 0.5s;
@@ -350,6 +373,28 @@ input[type=tel] {
 @media (max-width: 20em) {
   .top-header__register {
     padding-block: 0.1875rem;
+  }
+}
+@media (min-width: 84.375em) {
+  .top-header__register {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 84.375em) {
+  @supports (font-size: clamp( 0.75rem , 0.6723300971rem  +  0.3883495146vw , 1rem )) {
+    .top-header__register {
+      font-size: clamp( 0.75rem , 0.6723300971rem  +  0.3883495146vw , 1rem );
+    }
+  }
+  @supports not (font-size: clamp( 0.75rem , 0.6723300971rem  +  0.3883495146vw , 1rem )) {
+    .top-header__register {
+      font-size: calc(0.75rem + 0.25 * (100vw - 20rem) / 64.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .top-header__register {
+    font-size: 0.75rem;
   }
 }
 @media (min-width: 84.375em) {
@@ -911,7 +956,7 @@ input[type=tel] {
 }
 .content-block__circle-facebook::before {
   content: "";
-  background-image: url("/src/assets/image/icons/facebook.svg");
+  background-image: url("../src/assets/image/icons/facebook.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -990,7 +1035,7 @@ input[type=tel] {
 }
 .content-block__circle-instagram::before {
   content: "";
-  background-image: url("/src/assets/image/icons/instag.svg");
+  background-image: url("../src/assets/image/icons/instag.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1069,7 +1114,7 @@ input[type=tel] {
 }
 .content-block__circle-tweeter::before {
   content: "";
-  background-image: url("/src/assets/image/icons/tweeter.svg");
+  background-image: url("../src/assets/image/icons/tweeter.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1148,7 +1193,7 @@ input[type=tel] {
 }
 .content-block__circle-linkedin::before {
   content: "";
-  background-image: url("/src/assets/image/icons/linkedin.svg");
+  background-image: url("../src/assets/image/icons/linkedin.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1884,7 +1929,7 @@ input[type=tel] {
   position: absolute;
   top: 0;
   left: -5%;
-  background-image: url("/src/assets/image/sushi-sashimi-smoked.webp");
+  background-image: url("../src/assets/image/sushi-sashimi-smoked.webp");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -2591,7 +2636,7 @@ input[type=tel] {
 }
 .block-info__circle-spoon::before {
   content: "";
-  background-image: url("/src/assets/image/icons/knife-spoon.svg");
+  background-image: url("../src/assets/image/icons/knife-spoon.svg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 1.9375rem;
@@ -2656,7 +2701,7 @@ input[type=tel] {
 }
 .block-info__circle-fork::before {
   content: "";
-  background-image: url("/src/assets/image/icons/spoon-fork.svg");
+  background-image: url("../src/assets/image/icons/spoon-fork.svg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 1.6875rem;
@@ -2721,7 +2766,7 @@ input[type=tel] {
 }
 .block-info__circle-delivery::before {
   content: "";
-  background-image: url("/src/assets/image/icons/delivery.svg");
+  background-image: url("../src/assets/image/icons/delivery.svg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 2.5625rem;
@@ -3179,7 +3224,7 @@ input[type=tel] {
 .main-content__rate::before {
   margin-right: 0.625rem;
   content: "";
-  background-image: url("/src/assets/image/icons/star.svg");
+  background-image: url("../src/assets/image/icons/star.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -3889,7 +3934,7 @@ input[type=tel] {
   left: -1%;
   height: 56%;
   width: 26%;
-  background-image: url("/src/assets/image/vegetables.webp");
+  background-image: url("../src/assets/image/vegetables.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -4491,7 +4536,7 @@ input[type=tel] {
   border-top-left-radius: 4.375rem;
   border-bottom-right-radius: 4.375rem;
   width: 100%;
-  background-image: url("/src/assets/image/backgrounds/main-bg.svg");
+  background-image: url("../src/assets/image/backgrounds/main-bg.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -5419,7 +5464,7 @@ input[type=tel] {
 }
 .about-us__link-circle-facebook::before {
   content: "";
-  background-image: url("/src/assets/image/icons/facebook-lite.svg");
+  background-image: url("../src/assets/image/icons/facebook-lite.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -5437,7 +5482,7 @@ input[type=tel] {
 }
 .about-us__link-circle-instagram::before {
   content: "";
-  background-image: url("/src/assets/image/icons/instag.svg");
+  background-image: url("../src/assets/image/icons/instag.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -5455,7 +5500,7 @@ input[type=tel] {
 }
 .about-us__link-circle-tweeter::before {
   content: "";
-  background-image: url("/src/assets/image/icons/tweeter.svg");
+  background-image: url("../src/assets/image/icons/tweeter.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -5534,7 +5579,7 @@ input[type=tel] {
 }
 .about-us__circle-linkedin::before {
   content: "";
-  background-image: url("/src/assets/image/icons/linkedin.svg");
+  background-image: url("../src/assets/image/icons/linkedin.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -5552,7 +5597,7 @@ input[type=tel] {
 }
 .about-us__link-circle-linkedin::before {
   content: "";
-  background-image: url("/src/assets/image/icons/linkedin.svg");
+  background-image: url("../src/assets/image/icons/linkedin.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -5885,7 +5930,7 @@ input[type=tel] {
 }
 .email-block-bottom__btn-submit::before {
   content: "";
-  background-image: url("/src/assets/image/icons/arrow-light.svg");
+  background-image: url("../src/assets/image/icons/arrow-light.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
