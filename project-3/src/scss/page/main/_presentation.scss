@@ -4,7 +4,7 @@
   &__wrapper {
     @include adaptiveValue("padding-bottom", 35, 10);
     padding-top: toRem(95);
-    background-image: url("/src/assets/image/backgrounds/background-sushi.webp");
+    background-image: url("../src/assets/image/backgrounds/background-sushi.webp");
     background-position: right -1%;
     background-size: 68% 75%;
     background-repeat: no-repeat;

@@ -397,7 +397,7 @@ input[type=tel] {
 
 .presentation__wrapper {
   padding-top: 5.9375rem;
-  background-image: url("/src/assets/image/backgrounds/background-sushi.webp");
+  background-image: url("../src/assets/image/backgrounds/background-sushi.webp");
   background-position: right -1%;
   background-size: 68% 75%;
   background-repeat: no-repeat;
