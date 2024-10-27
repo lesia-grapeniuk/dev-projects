@@ -1866,7 +1866,7 @@ input[type=tel] {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  height: 80vh;
+  height: 105%;
   width: 55%;
   z-index: -1;
 }
