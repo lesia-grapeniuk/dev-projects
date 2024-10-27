@@ -91,7 +91,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include adaptiveValue("gap", 30, 4);
+    @include adaptiveValue("gap", 30, 3);
 
     }
 
@@ -144,11 +144,14 @@
   // .top-header__link
 
   &__link {
+    @include adaptiveValue('padding-block', 5, 3);
+    @include adaptiveValue('padding-inline', 7, 3);
+
     background-color: rgba(255, 255, 255, 0.99);
     border-radius: toRem(23);
 
-    @media (max-width: toEm(665)) {
-      padding: 0;
-    }
+    // @media (max-width: toEm(665)) {
+    //   padding: 0;
+    // }
   }
 }
