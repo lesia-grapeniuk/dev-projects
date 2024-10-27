@@ -43,7 +43,7 @@
   &__bottom {
     display: none;
 
-    @media (max-width: toEm(665)) {
+    @media (max-width: toEm(815)) {
       display: block;
       @include adaptiveValue("padding-top", 20, 5);
       @include adaptiveValue("padding-bottom", 20, 5);
@@ -67,6 +67,7 @@
     @media (max-width: toEm(665)) {
       max-width: toRem(132);
       height: toRem(35);
+      background-color: #fff;
     }
   }
 
