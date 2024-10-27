@@ -1,0 +1,38 @@
+@use "sass:math";
+
+@import "/src/scss/_variables.scss";
+@import "/src/scss/_mixins.scss";
+@import "/src/scss/_reset.scss";
+@import "/src/scss/page/_header.scss";
+@import "/src/scss/page/main/_main.scss";
+@import "/src/scss/page/_footer.scss";
+
+// ==========================================================
+html {
+  scroll-behavior: smooth;
+}
+body {
+}
+.wrapper {
+  position: relative;
+  font-weight: 400;
+  font-size: toRem(16);
+  min-height: 100%;
+  width: 100%;
+  overflow: clip;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  
+}
+.wrapper > main {
+  flex-grow: 1;
+}
+/* ------------------------- */
+[class*="__container"] {
+  max-width: toRem(1200);
+  padding-inline: toRem(15);
+  margin: 0 auto;
+}
+
+// ============================

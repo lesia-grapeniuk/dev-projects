@@ -1,0 +1,210 @@
+.subscribes {
+  // .subscribes__wrapper
+
+  &__wrapper {
+    width: 100%;
+    @include adaptiveValue("padding-block", 80, 20);
+  }
+
+  // .subscribes__container
+
+  &__container {
+    border-top-left-radius: toRem(70);
+    border-bottom-right-radius: toRem(70);
+    width: 100%;
+    background-image: url("/src/assets/image/backgrounds/main-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+.container-subscribes {
+  // .container-subscribes__content-block
+
+  &__content-block-sbcs {
+  }
+}
+.content-block-sbcs {
+  width: 100%;
+  display: flex;
+  @include adaptiveValue("padding-left", 25, 5);
+  @include adaptiveValue("padding-right", 60, 10);
+  justify-content: space-between;
+  align-items: center;
+  overflow: visible;
+  @include adaptiveValue("gap", 50, 25);
+  flex-wrap: nowrap;
+
+  @media (max-width: toEm(999)) {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-between;
+    @include adaptiveValue("gap", 30, 15);
+    @include adaptiveValue("padding-bottom", 60, 10);
+    height: 50%;
+  }
+  // .content-block__right-block
+
+  &__right-block {
+  }
+
+  // .content-block__left-block
+
+  &__left-block {
+  }
+}
+.block-img {
+  // .block-img__wrapper
+
+  &__wrapper {
+    position: relative;
+    @include adaptiveValue("width", 380, 150);
+    height: toRem(380);
+    z-index: 1;
+
+    @media (max-width: toEm(999)) {
+      height: toRem(200);
+      left: -20%;
+    }
+    @media (max-width: toEm(500)) {
+      height: toRem(150);
+      left: -13%;
+    }
+    @media (max-width: toEm(400)) {
+      height: toRem(100);
+      left: -13%;
+    }
+
+    & img {
+      position: absolute;
+      top: -24%;
+      left: 0;
+      width: 140%;
+      height: auto;
+      object-fit: contain;
+      aspect-ratio: 1 / 1;
+
+      @media (max-width: toEm(1185)) {
+        top: -16%;
+        left: -6%;
+      }
+      @media (max-width: toEm(500)) {
+        left: 0;
+      }
+    }
+  }
+}
+.block-info-subscribes {
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: toRem(15);
+  max-width: toRem(630);
+  border-radius: toRem(13);
+  @include adaptiveValue("padding", 20, 5);
+
+  @media (max-width: toEm(999)) {
+    background-color: rgba(0, 0, 0, 0.76);
+    @include adaptiveValue("gap", 40, 20);
+  }
+
+  // .block-info-subscribes__title
+
+  &__title {
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+  }
+
+  // .block-info-subscribes__text-info
+
+  &__text-info {
+    width: 100%;
+
+    & p {
+      color: #fff;
+      @include adaptiveValue("font-size", 16, 10);
+      line-height: 1.5;
+      @media (max-width: toEm(999)) {
+        width: 70%;
+        margin: 0 auto;
+      }
+      @media (max-width: toEm(600)) {
+        width: 100%;
+        margin: 0 auto;
+        text-align: justify;
+      }
+      @media (max-width: toEm(400)) {
+        text-align: center;
+      }
+    }
+  }
+
+  // .block-info-subscribes__email-container
+
+  &__email-container {
+  }
+}
+.title-level-2 {
+}
+.email-block {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: toRem(5);
+  @include adaptiveValue("padding-inline", 19, 8);
+  @include adaptiveValue("padding-block", 5, 2);
+  @include adaptiveValue("margin-top", 15, 5);
+  background-color: #fff;
+  border-radius: toRem(13);
+  vertical-align: middle;
+
+  @media (max-width: toEm(999)) {
+    width: 70%;
+  }
+  // .email-block__input
+
+  &__input {
+    @include adaptiveValue("font-size", 16, 10);
+    @include adaptiveValue("padding-inline", 19, 8);
+    @include adaptiveValue("padding-block", 5, 2);
+    vertical-align: middle;
+
+    &::placeholder {
+      line-height: 1.5;
+      @include adaptiveValue("font-size", 13, 9);
+      vertical-align: middle;
+      padding-left: toRem(5);
+    }
+    &:active,
+    &:focus {
+      outline: none;
+      border-bottom: toRem(2) solid $redcolor;
+    }
+  }
+
+  // .email-block__btn-confirm
+
+  &__btn-confirm {
+    background-color: $redcolor;
+    color: #fff;
+    @include adaptiveValue("padding-block", 13, 4);
+    @include adaptiveValue("padding-inline", 22, 8);
+    @include adaptiveValue("font-size", 16, 8);
+    line-height: $lineHeight;
+    border-radius: toRem(13);
+    vertical-align: middle;
+    transition: all 0.4s;
+
+    &:hover {
+      transition: all 0.5s;
+      transform: scale(1.02);
+      background: linear-gradient(110deg, #ffe 0%, rgb(245, 83, 41) 61%);
+      color: #000;
+    }
+  }
+}
