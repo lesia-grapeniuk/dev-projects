@@ -1546,24 +1546,24 @@ input[type=tel] {
 }
 @media (min-width: 84.375em) {
   .info-block__text {
-    foont-size: 0.8125rem;
+    font-size: 0.8125rem;
   }
 }
 @media (min-width: 20em) and (max-width: 84.375em) {
-  @supports (foont-size: clamp( 0.5rem , 0.4029126214rem  +  0.4854368932vw , 0.8125rem )) {
+  @supports (font-size: clamp( 0.5rem , 0.4029126214rem  +  0.4854368932vw , 0.8125rem )) {
     .info-block__text {
-      foont-size: clamp( 0.5rem , 0.4029126214rem  +  0.4854368932vw , 0.8125rem );
+      font-size: clamp( 0.5rem , 0.4029126214rem  +  0.4854368932vw , 0.8125rem );
     }
   }
-  @supports not (foont-size: clamp( 0.5rem , 0.4029126214rem  +  0.4854368932vw , 0.8125rem )) {
+  @supports not (font-size: clamp( 0.5rem , 0.4029126214rem  +  0.4854368932vw , 0.8125rem )) {
     .info-block__text {
-      foont-size: calc(0.5rem + 0.3125 * (100vw - 20rem) / 64.375);
+      font-size: calc(0.5rem + 0.3125 * (100vw - 20rem) / 64.375);
     }
   }
 }
 @media (max-width: 20em) {
   .info-block__text {
-    foont-size: 0.5rem;
+    font-size: 0.5rem;
   }
 }
 @media (min-width: 84.375em) {

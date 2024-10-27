@@ -433,7 +433,7 @@
   // .info-block__text
 
   &__text {
-    @include adaptiveValue("foont-size", 13, 8);
+    @include adaptiveValue("font-size", 13, 8);
     line-height: 1.21;
     color: #888888;
     white-space: nowrap;
