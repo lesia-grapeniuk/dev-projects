@@ -358,132 +358,6 @@
   }
 }
 
-.bg-block {
-  border: toRem(2) solid rebeccapurple;
-  width: toRem(670);
-  @include adaptiveValue("height", 570, 500);
-  position: relative;
-  z-index: 100;
-
-  height: auto;
-  position: relative;
-  border-radius: 50% 0 0 50%;
-  overflow: visible;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0%;
-    right: 0%;
-    width: 50%;
-    height: 70vh;
-    background-image: url("/src/assets/image/backgrounds/header-bg.svg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 91;
-    border-radius: 50% 0 0 50%;
-  }
-
-  // .bg-block__big-img
-
-  &__big-img {
-    position: relative;
-    width: 105%;
-    right: -16%;
-    top: -18%;
-    border-radius: 75% 0 0 75%;
-
-    // @media (max-width: toEm(1145)) {
-    //   width: 105%;
-    // }
-    // @media (max-width: toEm(1080)) {
-    //   width: 115%;
-    // }
-    // @media (max-width: toEm(999)) {
-    //   width: 120%;
-    // }
-    // @media (max-width: toEm(950)) {
-    //   width: 130%;
-    // }
-    // @media (max-width: toEm(865)) {
-    //   width: 135%;
-    // }
-    // @media (max-width: toEm(850)) {
-    //   width: 200%;
-    // }
-
-    & img {
-      border-radius: 75% 0 0 75%;
-      width: 100%;
-      object-fit: cover;
-      aspect-ratio: 1/ 1;
-    }
-
-    // &::before {
-    //   width: 100%;
-    //   content: '';
-    //   position: absolute;
-    //   top: -60%;
-    //   right: -10%;
-    //   bottom: 0;
-    //   border-radius: 50% 0 0 50%;
-    //   left: 0;
-    //   background-image: url('/src/assets/image/backgrounds/header-bg.svg');
-    //   background-repeat: no-repeat;
-    //   background-size: cover;
-    //   background-position: center;
-    // }
-  }
-
-  // .bg-block__img
-
-  // .bg-block__small-img-lettuce-1
-
-  &__small-img-lettuce-1 {
-    position: absolute;
-    top: 20%;
-    left: 5%;
-    width: 10%;
-
-    & img {
-      width: 100%;
-      object-fit: contain;
-    }
-  }
-
-  &__sushi-img {
-    max-width: toRem(1063);
-    max-height: toRem(850);
-    width: 100%;
-    & img {
-      z-index: 95;
-      position: absolute;
-      bottom: 1%;
-      right: -1%;
-      transform: rotate(-10deg);
-      width: 100%;
-      object-fit: contain;
-    }
-  }
-
-  // .bg-block__small-img-lettuce-2
-
-  &__small-img-lettuce-2 {
-    position: absolute;
-    bottom: -5%;
-    right: 10%;
-    width: 8vw;
-    z-index: 3;
-    transform: rotate(-30deg);
-
-    & img {
-      width: 100%;
-      object-fit: contain;
-    }
-  }
-}
-
 .info-block {
   // overflow: hidden;
   width: 100%;
@@ -529,7 +403,7 @@
 
     &::before {
       content: "";
-      background-image: url("/src/assets/image/icons/time.svg");
+      background-image: url("../src/assets/image/icons/time.svg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -583,7 +457,7 @@
 
     &::before {
       content: "";
-      background-image: url("/src/assets/image/icons/location.svg");
+      background-image: url("../src/assets/image/icons/location.svg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -610,7 +484,7 @@
 
     &::before {
       content: "";
-      background-image: url("/src/assets/image/icons/call.svg");
+      background-image: url("../src/assets/image/icons/call.svg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
