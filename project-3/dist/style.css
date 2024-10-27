@@ -177,17 +177,17 @@ input[type=tel] {
 .container-header__bottom {
   display: none;
 }
-@media (max-width: 50.9375em) {
+@media (max-width: 41.5625em) {
   .container-header__bottom {
     display: block;
   }
 }
-@media (max-width: 50.9375em) and (min-width: 84.375em) {
+@media (max-width: 41.5625em) and (min-width: 84.375em) {
   .container-header__bottom {
     padding-top: 1.25rem;
   }
 }
-@media (max-width: 50.9375em) and (min-width: 20em) and (max-width: 84.375em) {
+@media (max-width: 41.5625em) and (min-width: 20em) and (max-width: 84.375em) {
   @supports (padding-top: clamp( 0.3125rem , 0.0212378641rem  +  1.4563106796vw , 1.25rem )) {
     .container-header__bottom {
       padding-top: clamp( 0.3125rem , 0.0212378641rem  +  1.4563106796vw , 1.25rem );
@@ -199,17 +199,17 @@ input[type=tel] {
     }
   }
 }
-@media (max-width: 50.9375em) and (max-width: 20em) {
+@media (max-width: 41.5625em) and (max-width: 20em) {
   .container-header__bottom {
     padding-top: 0.3125rem;
   }
 }
-@media (max-width: 50.9375em) and (min-width: 84.375em) {
+@media (max-width: 41.5625em) and (min-width: 84.375em) {
   .container-header__bottom {
     padding-bottom: 1.25rem;
   }
 }
-@media (max-width: 50.9375em) and (min-width: 20em) and (max-width: 84.375em) {
+@media (max-width: 41.5625em) and (min-width: 20em) and (max-width: 84.375em) {
   @supports (padding-bottom: clamp( 0.3125rem , 0.0212378641rem  +  1.4563106796vw , 1.25rem )) {
     .container-header__bottom {
       padding-bottom: clamp( 0.3125rem , 0.0212378641rem  +  1.4563106796vw , 1.25rem );
@@ -221,7 +221,7 @@ input[type=tel] {
     }
   }
 }
-@media (max-width: 50.9375em) and (max-width: 20em) {
+@media (max-width: 41.5625em) and (max-width: 20em) {
   .container-header__bottom {
     padding-bottom: 0.3125rem;
   }
@@ -429,9 +429,6 @@ input[type=tel] {
   transition: all 0.4s;
 }
 .top-header__link {
-  padding: 0.625rem;
-  padding-block: 0.625rem;
-  padding-inline: 0.9375rem;
   background-color: rgba(255, 255, 255, 0.99);
   border-radius: 1.4375rem;
 }
