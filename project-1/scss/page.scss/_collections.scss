@@ -38,7 +38,7 @@
 
   @media (max-width: toEm(596)) {
     grid-template-columns: 1fr;
-    grid-template-rows: toRem(340) minmax(0 toRem(542));
+    grid-template-rows: toRem(340) minmax(0, toRem(542));
     @include adaptiveValue("row-gap", 60, 10);
   }
 

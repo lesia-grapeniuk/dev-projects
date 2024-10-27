@@ -59,7 +59,7 @@
   &__box {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, toRem(312)));
-    grid-template-rows: repeat(auto-fit, minmax(toRem(312) 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(toRem(312), 1fr));
     @include adaptiveValue("gap", 24, 12);
 
     @media (max-width: toEm(630)) {

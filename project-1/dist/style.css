@@ -565,24 +565,24 @@ textarea {
 }
 @media (min-width: 84.375em) {
   .body-header::before {
-    hight: 5.625rem;
+    height: 5.625rem;
   }
 }
 @media (min-width: 20em) and (max-width: 84.375em) {
-  @supports (hight: clamp( 2.1875rem , 1.119538835rem  +  5.3398058252vw , 5.625rem )) {
+  @supports (height: clamp( 2.1875rem , 1.119538835rem  +  5.3398058252vw , 5.625rem )) {
     .body-header::before {
-      hight: clamp( 2.1875rem , 1.119538835rem  +  5.3398058252vw , 5.625rem );
+      height: clamp( 2.1875rem , 1.119538835rem  +  5.3398058252vw , 5.625rem );
     }
   }
-  @supports not (hight: clamp( 2.1875rem , 1.119538835rem  +  5.3398058252vw , 5.625rem )) {
+  @supports not (height: clamp( 2.1875rem , 1.119538835rem  +  5.3398058252vw , 5.625rem )) {
     .body-header::before {
-      hight: calc(2.1875rem + 3.4375 * (100vw - 20rem) / 64.375);
+      height: calc(2.1875rem + 3.4375 * (100vw - 20rem) / 64.375);
     }
   }
 }
 @media (max-width: 20em) {
   .body-header::before {
-    hight: 2.1875rem;
+    height: 2.1875rem;
   }
 }
 .menu-open .body-header {
@@ -991,7 +991,7 @@ textarea {
 @media (max-width: 37.25em) {
   .container-collections {
     grid-template-columns: 1fr;
-    grid-template-rows: 21.25rem minmax(0 33.875rem);
+    grid-template-rows: 21.25rem minmax(0, 33.875rem);
   }
 }
 @media (max-width: 37.25em) and (min-width: 84.375em) {
@@ -1459,7 +1459,7 @@ textarea {
 .container-brands__box {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 19.5rem));
-  grid-template-rows: repeat(auto-fit, minmax(19.5rem 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(19.5rem, 1fr));
 }
 @media (min-width: 84.375em) {
   .container-brands__box {
