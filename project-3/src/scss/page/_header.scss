@@ -124,6 +124,7 @@
   }
 
   &__register {
+    cursor: pointer;
     flex-shrink: 0;
     @include adaptiveValue("padding-block", 7, 3);
     @include adaptiveValue("font-size", 16, 12);

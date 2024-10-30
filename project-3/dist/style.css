@@ -344,6 +344,7 @@ input[type=tel] {
   color: #f16214;
 }
 .top-header__register {
+  cursor: pointer;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   line-height: 1.21;
