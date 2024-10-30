@@ -746,6 +746,7 @@ input[type=tel] {
   }
 }
 .content-block__button-link {
+  overflow: hidden;
   margin-top: 1.25rem;
   max-width: 11.875rem;
   display: -webkit-box;

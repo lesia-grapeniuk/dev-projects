@@ -139,6 +139,7 @@
   // .content-block__button
 
   &__button-link {
+    overflow: hidden;
     margin-top: toRem(20);
     max-width: toRem(190);
     display: flex;
