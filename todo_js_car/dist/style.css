@@ -521,20 +521,20 @@ input[type=tel] {
   }
 }
 @media (min-width: 20em) and (max-width: 84.375em) {
-  @supports (row-gap: clamp( 1rem , 0.7669902913rem  +  1.1650485437vw , 1.75rem )) {
+  @supports (row-gap: clamp( 0.5rem , 0.1116504854rem  +  1.9417475728vw , 1.75rem )) {
     .todos-container {
-      row-gap: clamp( 1rem , 0.7669902913rem  +  1.1650485437vw , 1.75rem );
+      row-gap: clamp( 0.5rem , 0.1116504854rem  +  1.9417475728vw , 1.75rem );
     }
   }
-  @supports not (row-gap: clamp( 1rem , 0.7669902913rem  +  1.1650485437vw , 1.75rem )) {
+  @supports not (row-gap: clamp( 0.5rem , 0.1116504854rem  +  1.9417475728vw , 1.75rem )) {
     .todos-container {
-      row-gap: calc(1rem + 0.75 * (100vw - 20rem) / 64.375);
+      row-gap: calc(0.5rem + 1.25 * (100vw - 20rem) / 64.375);
     }
   }
 }
 @media (max-width: 20em) {
   .todos-container {
-    row-gap: 1rem;
+    row-gap: 0.5rem;
   }
 }
 @media (min-width: 84.375em) {
@@ -543,20 +543,20 @@ input[type=tel] {
   }
 }
 @media (min-width: 20em) and (max-width: 84.375em) {
-  @supports (font-size: clamp( 1rem , 0.8446601942rem  +  0.7766990291vw , 1.5rem )) {
+  @supports (font-size: clamp( 0.75rem , 0.5169902913rem  +  1.1650485437vw , 1.5rem )) {
     .todos-container {
-      font-size: clamp( 1rem , 0.8446601942rem  +  0.7766990291vw , 1.5rem );
+      font-size: clamp( 0.75rem , 0.5169902913rem  +  1.1650485437vw , 1.5rem );
     }
   }
-  @supports not (font-size: clamp( 1rem , 0.8446601942rem  +  0.7766990291vw , 1.5rem )) {
+  @supports not (font-size: clamp( 0.75rem , 0.5169902913rem  +  1.1650485437vw , 1.5rem )) {
     .todos-container {
-      font-size: calc(1rem + 0.5 * (100vw - 20rem) / 64.375);
+      font-size: calc(0.75rem + 0.75 * (100vw - 20rem) / 64.375);
     }
   }
 }
 @media (max-width: 20em) {
   .todos-container {
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
 }
 @media (min-width: 84.375em) {
@@ -751,20 +751,20 @@ input[type=tel] {
   }
 }
 @media (min-width: 20em) and (max-width: 84.375em) {
-  @supports (width: clamp( 9.375rem , -0.3337378641rem  +  48.5436893204vw , 40.625rem )) {
+  @supports (width: clamp( 8.75rem , -1.1529126214rem  +  49.5145631068vw , 40.625rem )) {
     .todos-container__block span {
-      width: clamp( 9.375rem , -0.3337378641rem  +  48.5436893204vw , 40.625rem );
+      width: clamp( 8.75rem , -1.1529126214rem  +  49.5145631068vw , 40.625rem );
     }
   }
-  @supports not (width: clamp( 9.375rem , -0.3337378641rem  +  48.5436893204vw , 40.625rem )) {
+  @supports not (width: clamp( 8.75rem , -1.1529126214rem  +  49.5145631068vw , 40.625rem )) {
     .todos-container__block span {
-      width: calc(9.375rem + 31.25 * (100vw - 20rem) / 64.375);
+      width: calc(8.75rem + 31.875 * (100vw - 20rem) / 64.375);
     }
   }
 }
 @media (max-width: 20em) {
   .todos-container__block span {
-    width: 9.375rem;
+    width: 8.75rem;
   }
 }
 .todos-container__block input[type=checkbox] {

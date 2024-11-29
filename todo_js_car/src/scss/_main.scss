@@ -122,8 +122,8 @@
   flex-direction: column;
   background-color: rgba(0, 0, 0, 70%);
 
-  @include adaptiveValue("row-gap", 28, 16);
-  @include adaptiveValue("font-size", 24, 16);
+  @include adaptiveValue("row-gap", 28, 8);
+  @include adaptiveValue("font-size", 24, 12);
   @include adaptiveValue("padding-block", 20, 10);
   @include adaptiveValue("padding-inline", 50, 15);
   border-radius: toRem(8);
@@ -154,7 +154,7 @@
     & span {
       @include adaptiveValue("font-size", 24, 12);
       flex: 1 1 auto;
-      @include adaptiveValue('width', 650, 150);
+      @include adaptiveValue('width', 650, 140);
       word-wrap: break-word;
     }
 
