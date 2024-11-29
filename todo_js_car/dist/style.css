@@ -603,7 +603,8 @@ input[type=tel] {
     padding-inline: 0.9375rem;
   }
 }
-.todos-container div {
+.todos-container__block {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -621,94 +622,94 @@ input[type=tel] {
   transition: 0.2s;
 }
 @media (min-width: 84.375em) {
-  .todos-container div {
+  .todos-container__block {
     gap: 1.75rem;
   }
 }
 @media (min-width: 20em) and (max-width: 84.375em) {
   @supports (gap: clamp( 1rem , 0.7669902913rem  +  1.1650485437vw , 1.75rem )) {
-    .todos-container div {
+    .todos-container__block {
       gap: clamp( 1rem , 0.7669902913rem  +  1.1650485437vw , 1.75rem );
     }
   }
   @supports not (gap: clamp( 1rem , 0.7669902913rem  +  1.1650485437vw , 1.75rem )) {
-    .todos-container div {
+    .todos-container__block {
       gap: calc(1rem + 0.75 * (100vw - 20rem) / 64.375);
     }
   }
 }
 @media (max-width: 20em) {
-  .todos-container div {
+  .todos-container__block {
     gap: 1rem;
   }
 }
 @media (min-width: 84.375em) {
-  .todos-container div {
+  .todos-container__block {
     font-size: 1.5rem;
   }
 }
 @media (min-width: 20em) and (max-width: 84.375em) {
   @supports (font-size: clamp( 1rem , 0.8446601942rem  +  0.7766990291vw , 1.5rem )) {
-    .todos-container div {
+    .todos-container__block {
       font-size: clamp( 1rem , 0.8446601942rem  +  0.7766990291vw , 1.5rem );
     }
   }
   @supports not (font-size: clamp( 1rem , 0.8446601942rem  +  0.7766990291vw , 1.5rem )) {
-    .todos-container div {
+    .todos-container__block {
       font-size: calc(1rem + 0.5 * (100vw - 20rem) / 64.375);
     }
   }
 }
 @media (max-width: 20em) {
-  .todos-container div {
+  .todos-container__block {
     font-size: 1rem;
   }
 }
 @media (min-width: 84.375em) {
-  .todos-container div {
+  .todos-container__block {
     padding-block: 0.9375rem;
   }
 }
 @media (min-width: 20em) and (max-width: 84.375em) {
   @supports (padding-block: clamp( 0.625rem , 0.5279126214rem  +  0.4854368932vw , 0.9375rem )) {
-    .todos-container div {
+    .todos-container__block {
       padding-block: clamp( 0.625rem , 0.5279126214rem  +  0.4854368932vw , 0.9375rem );
     }
   }
   @supports not (padding-block: clamp( 0.625rem , 0.5279126214rem  +  0.4854368932vw , 0.9375rem )) {
-    .todos-container div {
+    .todos-container__block {
       padding-block: calc(0.625rem + 0.3125 * (100vw - 20rem) / 64.375);
     }
   }
 }
 @media (max-width: 20em) {
-  .todos-container div {
+  .todos-container__block {
     padding-block: 0.625rem;
   }
 }
 @media (min-width: 84.375em) {
-  .todos-container div {
+  .todos-container__block {
     padding-inline: 1.875rem;
   }
 }
 @media (min-width: 20em) and (max-width: 84.375em) {
   @supports (padding-inline: clamp( 0.9375rem , 0.6462378641rem  +  1.4563106796vw , 1.875rem )) {
-    .todos-container div {
+    .todos-container__block {
       padding-inline: clamp( 0.9375rem , 0.6462378641rem  +  1.4563106796vw , 1.875rem );
     }
   }
   @supports not (padding-inline: clamp( 0.9375rem , 0.6462378641rem  +  1.4563106796vw , 1.875rem )) {
-    .todos-container div {
+    .todos-container__block {
       padding-inline: calc(0.9375rem + 0.9375 * (100vw - 20rem) / 64.375);
     }
   }
 }
 @media (max-width: 20em) {
-  .todos-container div {
+  .todos-container__block {
     padding-inline: 0.9375rem;
   }
 }
-.todos-container div:hover {
+.todos-container__block:hover {
   border-color: #9f9351;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -716,13 +717,57 @@ input[type=tel] {
       -ms-transform: scale(1.03);
           transform: scale(1.03);
 }
-.todos-container div span {
-  text-align: left;
+.todos-container__block span {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  word-wrap: break-word;
 }
-.todos-container div input[type=checkbox] {
+@media (min-width: 84.375em) {
+  .todos-container__block span {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 84.375em) {
+  @supports (font-size: clamp( 0.75rem , 0.5169902913rem  +  1.1650485437vw , 1.5rem )) {
+    .todos-container__block span {
+      font-size: clamp( 0.75rem , 0.5169902913rem  +  1.1650485437vw , 1.5rem );
+    }
+  }
+  @supports not (font-size: clamp( 0.75rem , 0.5169902913rem  +  1.1650485437vw , 1.5rem )) {
+    .todos-container__block span {
+      font-size: calc(0.75rem + 0.75 * (100vw - 20rem) / 64.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .todos-container__block span {
+    font-size: 0.75rem;
+  }
+}
+@media (min-width: 84.375em) {
+  .todos-container__block span {
+    width: 40.625rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 84.375em) {
+  @supports (width: clamp( 9.375rem , -0.3337378641rem  +  48.5436893204vw , 40.625rem )) {
+    .todos-container__block span {
+      width: clamp( 9.375rem , -0.3337378641rem  +  48.5436893204vw , 40.625rem );
+    }
+  }
+  @supports not (width: clamp( 9.375rem , -0.3337378641rem  +  48.5436893204vw , 40.625rem )) {
+    .todos-container__block span {
+      width: calc(9.375rem + 31.25 * (100vw - 20rem) / 64.375);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .todos-container__block span {
+    width: 9.375rem;
+  }
+}
+.todos-container__block input[type=checkbox] {
   cursor: pointer;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -733,54 +778,54 @@ input[type=tel] {
   position: relative;
 }
 @media (min-width: 84.375em) {
-  .todos-container div input[type=checkbox] {
+  .todos-container__block input[type=checkbox] {
     width: 1.5625rem;
   }
 }
 @media (min-width: 20em) and (max-width: 84.375em) {
   @supports (width: clamp( 0.9375rem , 0.7433252427rem  +  0.9708737864vw , 1.5625rem )) {
-    .todos-container div input[type=checkbox] {
+    .todos-container__block input[type=checkbox] {
       width: clamp( 0.9375rem , 0.7433252427rem  +  0.9708737864vw , 1.5625rem );
     }
   }
   @supports not (width: clamp( 0.9375rem , 0.7433252427rem  +  0.9708737864vw , 1.5625rem )) {
-    .todos-container div input[type=checkbox] {
+    .todos-container__block input[type=checkbox] {
       width: calc(0.9375rem + 0.625 * (100vw - 20rem) / 64.375);
     }
   }
 }
 @media (max-width: 20em) {
-  .todos-container div input[type=checkbox] {
+  .todos-container__block input[type=checkbox] {
     width: 0.9375rem;
   }
 }
 @media (min-width: 84.375em) {
-  .todos-container div input[type=checkbox] {
+  .todos-container__block input[type=checkbox] {
     height: 1.5625rem;
   }
 }
 @media (min-width: 20em) and (max-width: 84.375em) {
   @supports (height: clamp( 0.9375rem , 0.7433252427rem  +  0.9708737864vw , 1.5625rem )) {
-    .todos-container div input[type=checkbox] {
+    .todos-container__block input[type=checkbox] {
       height: clamp( 0.9375rem , 0.7433252427rem  +  0.9708737864vw , 1.5625rem );
     }
   }
   @supports not (height: clamp( 0.9375rem , 0.7433252427rem  +  0.9708737864vw , 1.5625rem )) {
-    .todos-container div input[type=checkbox] {
+    .todos-container__block input[type=checkbox] {
       height: calc(0.9375rem + 0.625 * (100vw - 20rem) / 64.375);
     }
   }
 }
 @media (max-width: 20em) {
-  .todos-container div input[type=checkbox] {
+  .todos-container__block input[type=checkbox] {
     height: 0.9375rem;
   }
 }
-.todos-container div input[type=checkbox]:checked {
+.todos-container__block input[type=checkbox]:checked {
   background-color: #b38d3b;
   border: 2px solid #b38d3b;
 }
-.todos-container div input[type=checkbox]:checked::before {
+.todos-container__block input[type=checkbox]:checked::before {
   content: "✔";
   position: absolute;
   left: 50%;
@@ -791,9 +836,9 @@ input[type=tel] {
   color: white;
   font-size: 14px;
 }
-.todos-container div .btn-delete,
-.todos-container div .btn-edit-text,
-.todos-container div .btn-confirm {
+.todos-container__block .btn-delete,
+.todos-container__block .btn-edit-text,
+.todos-container__block .btn-confirm {
   background-image: url(../src/assets/images/icons/trash-icon.svg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -803,158 +848,158 @@ input[type=tel] {
           filter: invert(100%);
 }
 @media (min-width: 84.375em) {
-  .todos-container div .btn-delete,
-  .todos-container div .btn-edit-text,
-  .todos-container div .btn-confirm {
+  .todos-container__block .btn-delete,
+  .todos-container__block .btn-edit-text,
+  .todos-container__block .btn-confirm {
     width: 2.1875rem;
   }
 }
 @media (min-width: 20em) and (max-width: 84.375em) {
   @supports (width: clamp( 1.5625rem , 1.3683252427rem  +  0.9708737864vw , 2.1875rem )) {
-    .todos-container div .btn-delete,
-    .todos-container div .btn-edit-text,
-    .todos-container div .btn-confirm {
+    .todos-container__block .btn-delete,
+    .todos-container__block .btn-edit-text,
+    .todos-container__block .btn-confirm {
       width: clamp( 1.5625rem , 1.3683252427rem  +  0.9708737864vw , 2.1875rem );
     }
   }
   @supports not (width: clamp( 1.5625rem , 1.3683252427rem  +  0.9708737864vw , 2.1875rem )) {
-    .todos-container div .btn-delete,
-    .todos-container div .btn-edit-text,
-    .todos-container div .btn-confirm {
+    .todos-container__block .btn-delete,
+    .todos-container__block .btn-edit-text,
+    .todos-container__block .btn-confirm {
       width: calc(1.5625rem + 0.625 * (100vw - 20rem) / 64.375);
     }
   }
 }
 @media (max-width: 20em) {
-  .todos-container div .btn-delete,
-  .todos-container div .btn-edit-text,
-  .todos-container div .btn-confirm {
+  .todos-container__block .btn-delete,
+  .todos-container__block .btn-edit-text,
+  .todos-container__block .btn-confirm {
     width: 1.5625rem;
   }
 }
 @media (min-width: 84.375em) {
-  .todos-container div .btn-delete,
-  .todos-container div .btn-edit-text,
-  .todos-container div .btn-confirm {
+  .todos-container__block .btn-delete,
+  .todos-container__block .btn-edit-text,
+  .todos-container__block .btn-confirm {
     height: 2.1875rem;
   }
 }
 @media (min-width: 20em) and (max-width: 84.375em) {
   @supports (height: clamp( 1.5625rem , 1.3683252427rem  +  0.9708737864vw , 2.1875rem )) {
-    .todos-container div .btn-delete,
-    .todos-container div .btn-edit-text,
-    .todos-container div .btn-confirm {
+    .todos-container__block .btn-delete,
+    .todos-container__block .btn-edit-text,
+    .todos-container__block .btn-confirm {
       height: clamp( 1.5625rem , 1.3683252427rem  +  0.9708737864vw , 2.1875rem );
     }
   }
   @supports not (height: clamp( 1.5625rem , 1.3683252427rem  +  0.9708737864vw , 2.1875rem )) {
-    .todos-container div .btn-delete,
-    .todos-container div .btn-edit-text,
-    .todos-container div .btn-confirm {
+    .todos-container__block .btn-delete,
+    .todos-container__block .btn-edit-text,
+    .todos-container__block .btn-confirm {
       height: calc(1.5625rem + 0.625 * (100vw - 20rem) / 64.375);
     }
   }
 }
 @media (max-width: 20em) {
-  .todos-container div .btn-delete,
-  .todos-container div .btn-edit-text,
-  .todos-container div .btn-confirm {
+  .todos-container__block .btn-delete,
+  .todos-container__block .btn-edit-text,
+  .todos-container__block .btn-confirm {
     height: 1.5625rem;
   }
 }
-.todos-container div .btn-delete:hover,
-.todos-container div .btn-edit-text:hover,
-.todos-container div .btn-confirm:hover {
+.todos-container__block .btn-delete:hover,
+.todos-container__block .btn-edit-text:hover,
+.todos-container__block .btn-confirm:hover {
   -webkit-transform: scale(1.06);
       -ms-transform: scale(1.06);
           transform: scale(1.06);
   cursor: pointer;
 }
-.todos-container div .btn-delete:active,
-.todos-container div .btn-edit-text:active,
-.todos-container div .btn-confirm:active {
+.todos-container__block .btn-delete:active,
+.todos-container__block .btn-edit-text:active,
+.todos-container__block .btn-confirm:active {
   -webkit-filter: saturate(-50%);
           filter: saturate(-50%);
 }
-.todos-container div .btn-edit-text {
+.todos-container__block .btn-edit-text {
   background-image: url(../src/assets/images/icons/edit.svg);
 }
-.todos-container div .btn-confirm {
+.todos-container__block .btn-confirm {
   background-image: url("../src/assets/images/icons/confirm.svg");
 }
-.todos-container div .editInput {
+.todos-container__block .editInput {
   font-family: "Quando", sans-serif;
   letter-spacing: 0.25rem;
   border-radius: 0.5rem;
   border: 0.03125rem solid #ffffff;
 }
 @media (min-width: 84.375em) {
-  .todos-container div .editInput {
+  .todos-container__block .editInput {
     font-size: 1.375rem;
   }
 }
 @media (min-width: 20em) and (max-width: 84.375em) {
   @supports (font-size: clamp( 0.875rem , 0.7196601942rem  +  0.7766990291vw , 1.375rem )) {
-    .todos-container div .editInput {
+    .todos-container__block .editInput {
       font-size: clamp( 0.875rem , 0.7196601942rem  +  0.7766990291vw , 1.375rem );
     }
   }
   @supports not (font-size: clamp( 0.875rem , 0.7196601942rem  +  0.7766990291vw , 1.375rem )) {
-    .todos-container div .editInput {
+    .todos-container__block .editInput {
       font-size: calc(0.875rem + 0.5 * (100vw - 20rem) / 64.375);
     }
   }
 }
 @media (max-width: 20em) {
-  .todos-container div .editInput {
+  .todos-container__block .editInput {
     font-size: 0.875rem;
   }
 }
 @media (min-width: 84.375em) {
-  .todos-container div .editInput {
+  .todos-container__block .editInput {
     padding-block: 0.625rem;
   }
 }
 @media (min-width: 20em) and (max-width: 84.375em) {
   @supports (padding-block: clamp( 0.3125rem , 0.2154126214rem  +  0.4854368932vw , 0.625rem )) {
-    .todos-container div .editInput {
+    .todos-container__block .editInput {
       padding-block: clamp( 0.3125rem , 0.2154126214rem  +  0.4854368932vw , 0.625rem );
     }
   }
   @supports not (padding-block: clamp( 0.3125rem , 0.2154126214rem  +  0.4854368932vw , 0.625rem )) {
-    .todos-container div .editInput {
+    .todos-container__block .editInput {
       padding-block: calc(0.3125rem + 0.3125 * (100vw - 20rem) / 64.375);
     }
   }
 }
 @media (max-width: 20em) {
-  .todos-container div .editInput {
+  .todos-container__block .editInput {
     padding-block: 0.3125rem;
   }
 }
 @media (min-width: 84.375em) {
-  .todos-container div .editInput {
+  .todos-container__block .editInput {
     padding-inline: 0.625rem;
   }
 }
 @media (min-width: 20em) and (max-width: 84.375em) {
   @supports (padding-inline: clamp( 0.3125rem , 0.2154126214rem  +  0.4854368932vw , 0.625rem )) {
-    .todos-container div .editInput {
+    .todos-container__block .editInput {
       padding-inline: clamp( 0.3125rem , 0.2154126214rem  +  0.4854368932vw , 0.625rem );
     }
   }
   @supports not (padding-inline: clamp( 0.3125rem , 0.2154126214rem  +  0.4854368932vw , 0.625rem )) {
-    .todos-container div .editInput {
+    .todos-container__block .editInput {
       padding-inline: calc(0.3125rem + 0.3125 * (100vw - 20rem) / 64.375);
     }
   }
 }
 @media (max-width: 20em) {
-  .todos-container div .editInput {
+  .todos-container__block .editInput {
     padding-inline: 0.3125rem;
   }
 }
-.todos-container div .editInput:focus {
+.todos-container__block .editInput:focus {
   border: 1px solid #aea053;
   outline: none;
 }

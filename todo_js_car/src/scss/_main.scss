@@ -130,7 +130,8 @@
   box-shadow: inset 0 0 15px #9f9351;
   margin-inline: toRem(15);
 
-  & div {
+  &__block {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     @include adaptiveValue("gap", 28, 16);
@@ -151,8 +152,10 @@
     }
 
     & span {
-      text-align: left;
-      flex-grow: 1;
+      @include adaptiveValue("font-size", 24, 12);
+      flex: 1 1 auto;
+      @include adaptiveValue('width', 650, 150);
+      word-wrap: break-word;
     }
 
     & input[type="checkbox"] {
