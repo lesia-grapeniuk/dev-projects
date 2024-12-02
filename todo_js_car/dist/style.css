@@ -293,10 +293,10 @@ input[type=tel] {
   content: "";
   position: absolute;
   bottom: 60%;
-  bottom: 60%;
   right: 3%;
   height: 0.1875rem;
   width: 82%;
+  line-height: 1;
   background: -webkit-gradient(linear, left top, right top, from(hsla(0, 44.82%, 35.69%, 0.29)), color-stop(48.9%, hsla(50.37, 100%, 50%, 0.8)), to(hsla(34.14, 10.49%, 81.68%, 0.87)));
   background: linear-gradient(90deg, hsla(0, 44.82%, 35.69%, 0.29) 0%, hsla(50.37, 100%, 50%, 0.8) 48.9%, hsla(34.14, 10.49%, 81.68%, 0.87) 100%);
   -webkit-box-shadow: -0.75rem 0.4375rem 0.5rem -1rem rgba(0, 0, 0, 0.3);
