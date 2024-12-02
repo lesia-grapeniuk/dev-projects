@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Quando:regular);
+@import url("https://fonts.googleapis.com/css?family=Quando:regular");
 *,
 *::before,
 *::after {
@@ -844,11 +844,12 @@ input[type=tel] {
           transform: translate(-50%, -50%);
   color: white;
   font-size: 0.875rem;
+  line-height: 1;
 }
 .todos-container__block .btn-delete,
 .todos-container__block .btn-edit-text,
 .todos-container__block .btn-confirm {
-  background-image: url(../src/assets/images/icons/trash-icon.svg);
+  background-image: url("../src/assets/images/icons/trash-icon.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -931,7 +932,7 @@ input[type=tel] {
           filter: saturate(-50%);
 }
 .todos-container__block .btn-edit-text {
-  background-image: url(../src/assets/images/icons/edit.svg);
+  background-image: url("../src/assets/images/icons/edit.svg");
 }
 .todos-container__block .btn-confirm {
   background-image: url("../src/assets/images/icons/confirm.svg");

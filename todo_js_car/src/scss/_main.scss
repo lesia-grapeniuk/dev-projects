@@ -185,6 +185,7 @@
       transform: translate(-50%, -50%);
       color: white;
       font-size: toRem(14);
+      line-height: 1;
     }
 
     // & .btnEditText {
@@ -198,7 +199,7 @@
     .btn-confirm {
       @include adaptiveValue("width", 35, 25);
       @include adaptiveValue("height", 35, 25);
-      background-image: url(../src/assets/images/icons/trash-icon.svg);
+      background-image: url("../src/assets/images/icons/trash-icon.svg");
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
@@ -215,7 +216,7 @@
     }
 
     & .btn-edit-text {
-      background-image: url(../src/assets/images/icons/edit.svg);
+      background-image: url("../src/assets/images/icons/edit.svg");
     }
 
     & .btn-confirm {
