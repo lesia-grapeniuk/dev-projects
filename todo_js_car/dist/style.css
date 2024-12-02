@@ -194,6 +194,7 @@ input[type=tel] {
   }
 }
 .todo__title {
+  position: relative;
   text-shadow: -0.25rem -0.125rem 0 #000, -0.25rem -0.125rem 0.75rem hsl(0, 1.7%, 50.22%), 0.4375rem 0.3125rem 0.3125rem #000, -0.1875rem 0.125rem 0 #000;
   color: #aea053;
   text-align: left;
@@ -292,7 +293,7 @@ input[type=tel] {
 .todo__title::after {
   content: "";
   position: absolute;
-  bottom: 60%;
+  bottom: 8%;
   right: 3%;
   height: 0.1875rem;
   width: 82%;
@@ -849,7 +850,6 @@ input[type=tel] {
 .todos-container__block .btn-delete,
 .todos-container__block .btn-edit-text,
 .todos-container__block .btn-confirm {
-  background-image: url("../src/assets/images/icons/trash-icon.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -930,6 +930,9 @@ input[type=tel] {
 .todos-container__block .btn-confirm:active {
   -webkit-filter: saturate(-50%);
           filter: saturate(-50%);
+}
+.todos-container__block .btn-delete {
+  background-image: url("../src/assets/images/icons/trash-icon.svg");
 }
 .todos-container__block .btn-edit-text {
   background-image: url("../src/assets/images/icons/edit.svg");
