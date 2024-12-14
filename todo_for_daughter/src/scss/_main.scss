@@ -1,0 +1,245 @@
+.todo {
+  margin: auto;
+  max-width: toRem(1000);
+  display: flex;
+  @include adaptiveValue("row-gap", 20, 5);
+  @include adaptiveValue("padding-block", 30, 10);
+  flex-direction: column;
+
+  // .todo__wrapper
+
+  &__wrapper {
+  }
+
+  // .todo__container
+
+  &__container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    @include adaptiveValue("row-gap", 30, 10);
+    border-radius: toRem(8);
+    opacity: 0.8;
+    filter: brightness(100%);
+    @include adaptiveValue("padding-block", 20, 10);
+  }
+
+  // .todo__title
+
+  &__title {
+    position: relative;
+    text-shadow: toRem(-4) toRem(-2) 0 #000, toRem(-4) toRem(-2) toRem(12) hsl(0deg 1.7% 50.22%), toRem(7) toRem(5) toRem(5) #000, toRem(-3) toRem(2) 0 #000;
+    color: #ca256f;
+    text-align: left;
+    @include adaptiveValue("margin-left", 40, 10);
+    text-transform: capitalize;
+    font-family: "Quando", sans-serif;
+    letter-spacing: toRem(2);
+
+    @include adaptiveValue("font-size", 48, 18);
+    @include adaptiveValue("padding-block", 20, 10);
+    @include adaptiveValue("padding-inline", 50, 15);
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 8%;
+      right: 3%;
+      height: toRem(3);
+      width: 82%;
+      line-height: 1;
+      background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(hsla(0, 24.22%, 85.3%, 0.28)),
+        color-stop(48.9%, hsla(62.11, 100%, 50%, 0.43)),
+        to(hsla(34.14, 100%, 50%, 0.72))
+      );
+      background: linear-gradient(
+        90deg,
+        hsl(0deg 44.82% 35.69% / 29%) 0%,
+        hsl(50.37deg 100% 50% / 80%) 48.9%,
+        hsl(34.14deg 10.49% 81.68% / 87%) 100%
+      );
+      box-shadow: toRem(-12) toRem(7) toRem(8) toRem(-16) rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  // .todo__input-container
+
+  &__input-container {
+    width: 100%;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: space-between;
+    // background-color: #000;
+    opacity: 0.8;
+    @include adaptiveValue("column-gap", 30, 10);
+  }
+
+  // .todo__input
+
+  &__input {
+    flex-grow: 1;
+    @include adaptiveValue("font-size", 32, 18);
+    @include adaptiveValue("padding-block", 20, 10);
+    @include adaptiveValue("padding-inline", 50, 15);
+    font-family: "Quando", sans-serif;
+    letter-spacing: toRem(4);
+    border-radius: toRem(8);
+    border: toRem(0.5) solid #ffffff;
+    background-color: rgba(186, 181, 181, 0.4);
+    color: #fff;
+    
+
+    &:focus {
+      border: toRem(1) solid #aea053;
+
+      outline: none;
+    }
+    &::placeholder {
+      color: black;
+    }
+  }
+
+  // .todo__btn
+
+  &__btn {
+    @include adaptiveValue("font-size", 48, 18);
+    @include adaptiveValue("padding-block", 20, 10);
+    @include adaptiveValue("padding-inline", 50, 15);
+    border-radius: toRem(8);
+    border: toRem(0.5) solid #fff;
+    background-color: rgba(186, 181, 181, 0.4);
+    transition: all 0.3s;
+    text-shadow: toRem(-4) toRem(-2) 0 #000, toRem(-4) toRem(-2) toRem(12) hsl(0deg 1.7% 50.22%), toRem(7) toRem(5) toRem(5) #000, toRem(3) toRem(2) 0 #000;
+    color: #f83618;
+
+    &:hover {
+      transform: scale(1.06);
+      transition: all 0.4s;
+      box-shadow: inset 0 0 toRem(15) #9f9351;
+      color: #9f9351;
+    }
+  }
+}
+
+// ========todos-container========
+
+.todos-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(186, 181, 181, 0.4);
+
+  @include adaptiveValue("row-gap", 28, 8);
+  @include adaptiveValue("font-size", 24, 12);
+  @include adaptiveValue("padding-block", 20, 10);
+  @include adaptiveValue("padding-inline", 50, 15);
+  border-radius: toRem(8);
+  box-shadow: inset 0 0 toRem(15) #9f9351;
+
+  &__block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @include adaptiveValue("gap", 28, 16);
+    @include adaptiveValue("font-size", 24, 16);
+    @include adaptiveValue("padding-block", 15, 10);
+    @include adaptiveValue("padding-inline", 30, 15);
+    align-items: center;
+    font-family: "Quando", sans-serif;
+    letter-spacing: toRem(2);
+    border-radius: toRem(8);
+    border: toRem(2) solid #f37657;
+    transition: 0.2s;
+
+    &:hover {
+      border-color: #9f9351;
+      transition: 0.5s;
+      transform: scale(1.03);
+    }
+
+    & span {
+      @include adaptiveValue("font-size", 24, 12);
+      flex: 1 1 auto;
+      @include adaptiveValue('width', 650, 140);
+      word-wrap: break-word;
+    }
+
+    & input[type="checkbox"] {
+      @include adaptiveValue("width", 25, 15);
+      @include adaptiveValue("height", 25, 15);
+      cursor: pointer;
+      appearance: none;
+      border: toRem(2) solid #ca256f;
+      border-radius: toRem(4);
+      background-color: #fffbe6;
+      position: relative;
+    }
+
+    & input[type="checkbox"]:checked {
+      background-color: #ca256f;
+      border: toRem(2) solid #ca256f;
+    }
+
+    & input[type="checkbox"]:checked::before {
+      content: "✔";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: toRem(14);
+      line-height: 1;
+    }
+
+    & .btn-delete,
+    .btn-edit-text,
+    .btn-confirm {
+      @include adaptiveValue("width", 35, 25);
+      @include adaptiveValue("height", 35, 25);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      vertical-align: middle;
+      filter: invert(100%);
+      &:hover {
+        transform: scale(1.06);
+        cursor: pointer;
+      }
+
+      &:active {
+        filter: saturate(-50%);
+      }
+    }
+
+    & .btn-delete {
+      background-image: url("../src/assets/images/icons/trash-icon.svg");
+    }
+
+    & .btn-edit-text {
+      background-image: url("../src/assets/images/icons/edit.svg");
+    }
+
+    & .btn-confirm {
+      background-image: url("../src/assets/images/icons/confirm.svg");
+    }
+
+    & .editInput {
+      @include adaptiveValue("font-size", 22, 14);
+      @include adaptiveValue("padding-block", 10, 5);
+      @include adaptiveValue("padding-inline", 10, 5);
+      font-family: "Quando", sans-serif;
+      letter-spacing: toRem(4);
+      border-radius: toRem(8);
+      border: toRem(0.5) solid #ffffff;
+
+      &:focus {
+        border: toRem(1) solid #aea053;
+
+        outline: none;
+      }
+    }
+  }
+}

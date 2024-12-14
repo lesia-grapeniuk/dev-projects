@@ -1,0 +1,38 @@
+@use "sass:math";
+
+@import url("https://fonts.googleapis.com/css?family=Quando:regular");
+
+@import "./src/scss/_reset.scss";
+@import "./src/scss/_variables.scss";
+@import "./src/scss/_mixins.scss";
+@import "./src/scss/_main.scss";
+
+// =============================
+body {
+  height: 100vh;
+
+  .wrapper {
+    background-image: url(../src/assets/images/bg.jpeg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    color: #fff;
+    position: relative;
+    min-height: 100%;
+    overflow: clip;
+
+    display: flex;
+    flex-direction: column;
+  }
+  .wrapper > main {
+    flex-grow: 1;
+  }
+  /* ------------------------- */
+  [class*="__container"] {
+    max-width: toRem(1320);
+    padding-inline: toRem(15);
+    margin: 0 auto;
+  }
+}
