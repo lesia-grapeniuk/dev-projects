@@ -428,19 +428,19 @@ input[type=tel] {
   outline: none;
 }
 .todo__input::-webkit-input-placeholder {
-  color: black;
+  color: #fff;
 }
 .todo__input::-moz-placeholder {
-  color: black;
+  color: #fff;
 }
 .todo__input:-ms-input-placeholder {
-  color: black;
+  color: #fff;
 }
 .todo__input::-ms-input-placeholder {
-  color: black;
+  color: #fff;
 }
 .todo__input::placeholder {
-  color: black;
+  color: #fff;
 }
 .todo__btn {
   border-radius: 0.5rem;
@@ -449,7 +449,7 @@ input[type=tel] {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   text-shadow: -0.25rem -0.125rem 0 #000, -0.25rem -0.125rem 0.75rem hsl(0, 1.7%, 50.22%), 0.4375rem 0.3125rem 0.3125rem #000, 0.1875rem 0.125rem 0 #000;
-  color: #f83618;
+  color: #fff;
 }
 @media (min-width: 84.375em) {
   .todo__btn {
